@@ -15,7 +15,7 @@ class Time
 	void show()
 	{
 		System.out.println("Hours = "+hrs);
-		System.out.println("Minuates = "+mins);
+		System.out.println("Minutes = "+mins);
 		System.out.println("Seconds = "+sec);
 	}		
 
