@@ -11,41 +11,46 @@ class AddTwoMatrix{
         int mat1[][] = new int[sizex][sizey]; 
         int mat2[][] = new int[sizex][sizey];
         int sum[][] = new int[sizex][sizey];
-        System.out.println("Enter Values in Matrix 1");
-        for(int i = 0 ; i < sizex ; i++)
-        {
-            for(int j = 0 ; j < sizey ; j++)
-            {
-                mat1[i][j] = scan.nextInt();
-            }
-            System.out.println("");
+        if (sizex*sizey==0){
+            System.out.println("Error: one size is zero");
         }
-        System.out.println("Enter Values in Matrix 2");
-        for(int i = 0 ; i < sizex ; i++)
-        {
-            for(int j = 0 ; j < sizey ; j++)
+        else{    
+            System.out.println("Enter Values in Matrix 1");
+            for(int i = 0 ; i < sizex ; i++)
             {
-                mat2[i][j] = scan.nextInt();
+                for(int j = 0 ; j < sizey ; j++)
+                {
+                    mat1[i][j] = scan.nextInt();
+                }
+                System.out.println("");
             }
-            System.out.println("");
-        }
+            System.out.println("Enter Values in Matrix 2");
+            for(int i = 0 ; i < sizex ; i++)
+            {
+                for(int j = 0 ; j < sizey ; j++)
+                {
+                    mat2[i][j] = scan.nextInt();
+                }
+                System.out.println("");
+            }
 
-        for(int i = 0 ; i < sizex ; i++)
-        {
-            for(int j = 0 ; j < sizey ; j++)
+            for(int i = 0 ; i < sizex ; i++)
             {
-                sum[i][j] = mat1[i][j] + mat2[i][j];
+                for(int j = 0 ; j < sizey ; j++)
+                {
+                    sum[i][j] = mat1[i][j] + mat2[i][j];
+                }
+            }
+            System.out.println("The added Matrix is ");
+            for(int i = 0 ; i < sizex ; i++)
+            {
+                for(int j = 0 ; j < sizey ; j++)
+                {
+                    System.out.println(sum[i][j]);
+                }
+                System.out.println("");
             }
         }
-        System.out.println("The added Matrix is ");
-        for(int i = 0 ; i < sizex ; i++)
-        {
-            for(int j = 0 ; j < sizey ; j++)
-            {
-                System.out.println(sum[i][j]);
-            }
-            System.out.println("");
-        }
-
     }
 }
+

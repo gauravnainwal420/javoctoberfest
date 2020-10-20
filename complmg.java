@@ -1,3 +1,42 @@
+class ComplexNums{
+    private int real, imaginary;
+    public ComplexNums(int real, int imaginary){
+        this.real = real;
+        this.imaginary = imaginary;
+    }
+    public ComplexNums(){
+        this.real = 1;
+        this.imaginary = 1;
+    }
+    public int getRealPart(){
+        return real;
+    }
+    public void setRealPart(int real){
+        this.real = real;
+    }
+    public int getImaginaryPart(){
+        return imaginary;
+    }
+    public void setImaginaryPart(int imaginary){
+        this.imaginary = imaginary;
+    }
+    public ComplexNums add(ComplexNums c1, ComplexNums c2){
+        ComplexNums c3= new ComplexNums();
+        c3.real = c1.real + c2.real;
+        c3.imaginary = c1.imaginary + c2.imaginary;
+        return c3;
+    }
+    public ComplexNums sub(ComplexNums c1, ComplexNums c2){
+        ComplexNums c3= new ComplexNums();
+        c3.real = c1.real - c2.real;
+        c3.imaginary = c1.imaginary - c2.imaginary;
+        return c3;
+    }
+    public void show(){
+        System.out.println(this.real + " " + this.imaginary + "i");
+    }
+}
+
 class CompImg{
 /*
     Write a java program to create class complex having member variables real and imaginary
